@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #999;
+  font-family: "Red Hat Text", sans-serif;
+}
+
+.search-box {
+  width: 600px;
+  background: #fff;
+  margin: 200px auto 0;
+  border-radius: 5px;
+  height: 50px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+}
+
+input {
+  flex: 1;
+  height: 30px;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+button {
+  background: transparent;
+  border: 0;
+  outline: 0;
+  display: inline-block;
+}
+button ri-search-2-line {
+  width: 25px;
+  color: #555;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+::-moz-placeholder {
+  color: #555;
+}
+
+::placeholder {
+  color: #555;
+}
+
+.container {
+  height: 40vh;
+  width: 90vh;
+  background: #fff;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 76px;
+  border-radius: 40px;
+  padding: 40px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: lighter;
+}
+
+h1 {
+  font-size: 80px;
+}
+
+h2 {
+  font-size: 35px;
+}
+
+h5 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.right-container-rain {
+  background-image: url("/images/rain.jpg");
+  background-size: cover;
+  color: white;
+  width: 45vh;
+  height: 40vh;
+  float: right;
+  position: absolute;
+  border-radius: 40px;
+  top: 326px;
+  padding: 20px;
+  padding-left: 30px;
+  right: 58vh;
+}
+.right-container-rain h1, .right-container-rain h2, .right-container-rain h3, .right-container-rain h4, .right-container-rain h5 {
+  color: #ffffff;
+}
+
+.right-container-over {
+  background-image: url("/images/overcast.jpg");
+  background-size: cover;
+  color: white;
+  width: 45vh;
+  height: 40vh;
+  float: right;
+  position: absolute;
+  border-radius: 40px;
+  top: 326px;
+  padding: 40px;
+  padding-left: 30px;
+  right: 58vh;
+}
+.right-container-over h1, .right-container-over h2, .right-container-over h3, .right-container-over h4, .right-container-over h5 {
+  color: #ffffff;
+}
+
+.right-container-few {
+  background-image: url("/images/fewclouds.jpg");
+  background-size: cover;
+  color: white;
+  width: 45vh;
+  height: 40vh;
+  float: right;
+  position: absolute;
+  border-radius: 40px;
+  top: 326px;
+  padding: 20px;
+  padding-left: 30px;
+  right: 58vh;
+}
+.right-container-few h1, .right-container-few h2, .right-container-few h3, .right-container-few h4, .right-container-few h5 {
+  color: #ffffff;
+}
+
+.right-container-snow {
+  background-image: url("/images/snow.jpg");
+  background-size: cover;
+  color: white;
+  width: 45vh;
+  height: 40vh;
+  float: right;
+  position: absolute;
+  border-radius: 40px;
+  top: 326px;
+  padding: 20px;
+  padding-left: 30px;
+  right: 58vh;
+}
+.right-container-snow h1, .right-container-snow h2, .right-container-snow h3, .right-container-snow h4, .right-container-snow h5 {
+  color: #ffffff;
+}
+
+.right-container-sky {
+  background-image: url("/images/clearsky.jpg");
+  background-size: cover;
+  color: white;
+  width: 45vh;
+  height: 40vh;
+  float: right;
+  position: absolute;
+  border-radius: 40px;
+  top: 326px;
+  padding: 20px;
+  padding-left: 30px;
+  right: 58vh;
+}
+.right-container-sky h1, .right-container-sky h2, .right-container-sky h3, .right-container-sky h4, .right-container-sky h5 {
+  color: #ffffff;
+}/*# sourceMappingURL=main.css.map */

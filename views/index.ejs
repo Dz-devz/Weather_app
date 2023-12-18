@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.7.0/remixicon.css" integrity="sha512-vgK7iuWG4Uq4GJHovntONntOoSduelAYImQTT3f0mvdUcI95qQgSmf4ldDhn/FNl3g/xouqOtsm/NxFqaTnxbA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="search-box">
+        
+    <form action="/search" class="form" method="POST">
+        <div class="row">
+        <input type="text" name="searchData" placeholder="Search location.">
+        <button type="submit" class="form-submit"> <i class="ri-search-2-line"></i> </button>
+        </div>
+    </form>
+
+</div>
+    <div class="container">
+        <h5>Weather Update <br> Today Current Time</h5>
+        <h3 style="line-height: 1.5; margin-top: 10px;">Status: <%= locals.weatherStat %></h3>
+        <h3 style="text-transform: capitalize;">Description: <%= locals.wdescription %></h3>
+        <!-- to set a default location -->
+    <%    if(locals.content){ %>
+        <h2 style="margin-top: 90px"><%= locals.content %></h2>
+        <!-- when the user search a location -->
+        <%  } else { %>
+        <h2 style="margin-top: 90px"><%= locals.locName %></h2>
+        <%  } %>
+        <h3 style="font-size: 20px;"><%= locals.code %></h3>
+    
+    <!-- to determine what image will show depends on the status and description of the weather -->
+        <%     if(locals.wdescription === "rain"){ %>
+            <div class="right-container-rain">
+                <h1><%= locals.temp %>°C</h1>
+                <h3 style="margin-top: 170px;">Humidity: <%= humi %></h3>
+                <h3>Wind Per/Km: <%= windSpeed %></h3>
+            </div>
+    <%    } else if(locals.wdescription === "light rain") { %>
+            <div class="right-container-rain">
+                <h1><%= locals.temp %>°C</h1>
+                <h3 style="margin-top: 170px;">Humidity: <%= humi %></h3>
+                <h3>Wind Per/Km: <%= windSpeed %></h3>
+            </div>
+    <%    } else if(locals.wdescription === "moderate rain") { %>
+            <div class="right-container-rain">
+                <h1><%= locals.temp %>°C</h1>
+                <h3 style="margin-top: 170px;">Humidity: <%= humi %></h3>
+                <h3>Wind Per/Km: <%= windSpeed %></h3>
+            </div>
+    <%    } else if(locals.wdescription === "heavy rain") { %>
+            <div class="right-container-rain">
+                <h1><%= locals.temp %>°C</h1>
+                <h3 style="margin-top: 170px;">Humidity: <%= humi %></h3>
+                <h3>Wind Per/Km: <%= windSpeed %></h3>
+            </div>
+        <%    } else if(locals.wdescription === "heavy intensity rain") { %>
+            <div class="right-container-rain">
+                <h1><%= locals.temp %>°C</h1>
+                <h3 style="margin-top: 170px;">Humidity: <%= humi %></h3>
+                <h3>Wind Per/Km: <%= windSpeed %></h3>
+            </div>
+    <%    } else if(locals.wdescription === "overcast clouds") { %>
+            <div class="right-container-over">
+                <h1><%= locals.temp %>°C</h1>
+                <h3 style="margin-top: 170px;">Humidity: <%= humi %></h3>
+                <h3>Wind Per/Km: <%= windSpeed %></h3>
+            </div>
+    <%    } else if(locals.wdescription === "few clouds") { %>
+            <div class="right-container-few">
+                <h1><%= locals.temp %>°C</h1>
+                <h3 style="margin-top: 170px;">Humidity: <%= humi %></h3>
+                <h3>Wind Per/Km: <%= windSpeed %></h3>
+            </div>
+    <%     } else if(locals.wdescription === "scattered clouds") { %>
+            <div class="right-container-few">
+                <h1><%= locals.temp %>°C</h1>
+                <h3 style="margin-top: 170px;">Humidity: <%= humi %></h3>
+                <h3>Wind Per/Km: <%= windSpeed %></h3>
+            </div>
+        <%     } else if(locals.wdescription === "broken clouds") { %>
+            <div class="right-container-few">
+                <h1><%= locals.temp %>°C</h1>
+                <h3 style="margin-top: 170px;">Humidity: <%= humi %></h3>
+                <h3>Wind Per/Km: <%= windSpeed %></h3>
+            </div>
+        <%  } else if(locals.wdescription === "clear sky") { %>
+            <div class="right-container-sky">
+                <h1><%= locals.temp %>°C</h1>
+                <h3 style="margin-top: 170px;">Humidity: <%= humi %></h3>
+                <h3>Wind Per/Km: <%= windSpeed %></h3>
+            </div>
+        <% } else if(locals.wdescription === "light snow") { %>   
+        <div class="right-container-snow">
+            <h1><%= locals.temp %>°C</h1>
+            <h3 style="margin-top: 170px;">Humidity: <%= humi %></h3>
+            <h3>Wind Per/Km: <%= windSpeed %></h3>
+        </div>
+        <% } else if(locals.wdescription === "heavy snow") { %>   
+            <div class="right-container-snow">
+                <h1><%= locals.temp %>°C</h1>
+                <h3 style="margin-top: 170px;">Humidity: <%= humi %></h3>
+                <h3>Wind Per/Km: <%= windSpeed %></h3>
+            </div>
+            <% } %>
+    </div>
+
+</body>
+</html>
