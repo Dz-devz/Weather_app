@@ -9,6 +9,6 @@ type in your terminal the needed npm
 2. npm install express axios body-parser ejs nodemon
 
 3. then run using: 
-nodemon index.ejs 
+nodemon index.js
 or
-node index.ejs
+node index.js
